@@ -1,0 +1,8 @@
+// Пример подключения скачанных в проект шрифтов
+
+@font-face {
+  font-family: "gotham-pro-medium";
+  src:
+    url("../../fonts/GothamPro-Medium.woff2") format("woff2"),
+    url("../../fonts/GothamPro-Medium.woff") format("woff");
+}

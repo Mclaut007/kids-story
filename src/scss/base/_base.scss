@@ -1,0 +1,154 @@
+// В font-size можно записать самый частый размер шрифта на сайте, в font-family - самый частое семейство шрифта.
+
+body {
+  font-family: var(--main-font-family);
+  color: var(--main-color);
+  font-size: rem(16);
+  font-weight: 500;
+  line-height: 1.3;
+  // color: $mainColor;
+  // overflow-wrap: break-word;
+  // word-wrap: break-word;
+}
+
+.wrapper {
+  overflow: hidden;
+  // overflow-x: hidden;
+  // overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/*------------------*/
+
+// Функция возвращает размер шрифта в rem (переводит из пикселей в rem). По умолчанию в браузерах это 16px. В стилях для конкретного текста можно писать font-size: rem(32); Это пример. Тогда в файле css окажется 2rem. 16px - это размер по умолчанию в браузерах. $size пишем без 'px'.
+// [class$="-container"] ниже для случаев типа footer__top-container
+
+[class$="__container"],
+[class$="-container"],
+[class$="__container_wide"],
+[class$="-container_wide"] {
+  min-width: $minWidth;
+  padding: 0 rem(20);
+  margin: 0 auto;
+}
+
+[class$="__container"],
+[class$="-container"] {
+  max-width: $maxWidth;
+}
+
+[class$="__container_wide"],
+[class$="-container_wide"] {
+  max-width: rem(1834);
+}
+
+.main {
+  flex-grow: 1;
+}
+
+body._lock {
+  overflow: hidden;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  min-width: rem(308);
+  min-height: rem(40);
+  font-family: var(--main-font-family);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--white-color);
+  padding: rem(8) rem(24);
+  background: var(--color3);
+  border-radius: rem(50);
+  text-align: center;
+  user-select: none;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+  transition: background-color 0.3s ease 0s;
+
+  // .button_header
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background: var(--color3);
+    }
+  }
+  &_header {
+  }
+}
+
+/*--------- visually-hidden ---------*/
+
+// Класс, который можно использовать для элементов, которые  нужно скрыть, но так, чтобы скринридеры их видели. Например, заголовок, который должен по логике быть, но по дизайн-макету его нет. По скрытым таким способам ссылкам и кнопкам будет при табе происходить фокусировка, что будет не видно.
+// При display: none; ни поисковики, ни скринридеды не видят скрытый элемент. Атрибут hidden может заменить display: none;
+// Если нужно сделать плавное появление и исчезновение выпадающего меню можно использовать visibility и opacity (hidden и 0). Но при этом нужно, чтобы элемент был спозиционирован абсолютно. Иначе он будет продолжать занимать место в разметке. Поисковики будут видеть элемент, скринридеры - нет.
+//Вариант: opacity: 0; pointer-events: none; (и поисковики, и скринридеры видят элемент, элемент занимает место в разметке, как и в варианте выше). Делает то же самое.
+// Исчезновение блока можно сделать с помощью спойлера (за счет height: 0;). В этом случае исчезновение/появление анимируется. И скрытый элемент будут видеть и поисковики, и скринридеры. Но в случае с height: auto; height не анимируется. Нужно, чтобы оба значения height были числами. Плюс нужно убирать паддинги и бордеры (при height: 0 они остаются видны).
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+/*------------------*/
+
+// Класс none - чтобы временно скрывать блоки во время разработки
+
+.none {
+  display: none !important;
+}
+
+.logo {
+  // .logo__img
+
+  &__img {
+    width: 100%;
+  }
+}
+
+.phone-icon {
+}
+
+.social-medias {
+  // .social-medias__item
+
+  &__item {
+    // .social-medias__item_1
+
+    &_1 {
+    }
+
+    // .social-medias__item_2
+
+    &_2 {
+    }
+  }
+
+  // .social-medias__icon
+
+  &__icon {
+  }
+
+  // .social-medias__icon_clone
+
+  &__icon_clone {
+    path {
+      fill: var(--white-color);
+    }
+  }
+}
