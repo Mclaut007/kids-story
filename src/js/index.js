@@ -114,19 +114,17 @@ import moveHeaderButton from "./modules/move-header-button";
 
 moveHeaderButton();
 
-// ========== Маска для телефона (поля input) на JS ========== //
+// ================= Intro-swiper =============== //
 
-// Работает для инпутов с классом tel
+import introSwiper from "./modules/intro-swiper";
 
-// import inputPhoneMask from "./modules/input-phone-mask.js";
+introSwiper();
 
 // ========== Плагин Imaskjs (маска для телефона) ========== //
 
-// import inputPhoneIMask from "./modules/imask";
+import inputPhoneIMask from "./modules/imask";
 
-// inputPhoneIMask();
-
-// import inputPhoneMask from "./modules/input-phone-mask.js";
+inputPhoneIMask();
 
 // ==================== Popup-окно ===================== //
 

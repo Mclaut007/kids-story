@@ -1,5 +1,4 @@
 // В font-size можно записать самый частый размер шрифта на сайте, в font-family - самый частое семейство шрифта.
-
 body {
   font-family: var(--main-font-family);
   color: var(--main-color);
@@ -77,7 +76,7 @@ body._lock {
   // .button_header
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      background: var(--color3);
+      background: var(--color2);
     }
   }
   &_header {

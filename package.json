@@ -35,5 +35,9 @@
   },
   "browserslist": [
     "last 5 versions"
-  ]
+  ],
+  "dependencies": {
+    "imask": "^7.6.1",
+    "swiper": "^11.2.1"
+  }
 }

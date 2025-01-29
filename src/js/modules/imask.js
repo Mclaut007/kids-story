@@ -4,14 +4,14 @@ import IMask from "imask";
 
 function inputPhoneIMask() {
   // input с телефоном
-  const phoneInput = document.querySelector(".phone-input");
+  const phoneInput = document.querySelector("#phone-input");
 
   // Кнопка отправки формы
-  const phoneSubmit = document.querySelector(".phone-submit");
+  const phoneSubmit = document.querySelector(".sign-up-tour__submit-button ");
 
   // Создаем маску в инпуте
   const mask = new IMask(phoneInput, {
-    mask: "+{7}(000)000-00-00",
+    mask: "+{7}000-000-00-00",
     lazy: false, // Чтобы "placeholder" не исчезал при введении номера
   });
 
@@ -28,6 +28,8 @@ function inputPhoneIMask() {
   }
 
   // При отправке формы записываем в value номер без скобок и дефисов
+
+  const form = document.querySelector(".sign-up-tour__form");
 
   form.addEventListener("submit", () => {
     input.value = mask.unmaskedValue;
