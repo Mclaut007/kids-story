@@ -1,0 +1,129 @@
+.details {
+  // .details__container
+
+  &__container {
+    padding: rem(102) rem(20) rem(116);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: rem(20);
+    row-gap: rem(25);
+    @media (max-width: $desk) {
+      grid-template-columns: repeat(2, minmax(0, rem(450)));
+      justify-content: space-around;
+      padding: rem(80) rem(20) rem(80);
+    }
+    @media (max-width: $mobile) {
+      padding: rem(64) rem(20) rem(80);
+      // row-gap: rem(20);
+    }
+    @media (max-width: $mobileSmall) {
+      padding-top: rem(60);
+    }
+    @media (max-width: rem(400)) {
+      row-gap: rem(13);
+      padding: rem(37) rem(20) rem(37);
+    }
+  }
+
+  // .details__item
+
+  &__item {
+    display: flex;
+    gap: rem(20);
+    align-items: center;
+    @media (max-width: $mobile) {
+      display: block;
+    }
+    &_1 {
+      @media (max-width: $desk) {
+        order: 1;
+      }
+    }
+    &_2 {
+      @media (max-width: $desk) {
+        order: 2;
+      }
+    }
+    &_3 {
+      @media (max-width: $desk) {
+        order: 7;
+      }
+    }
+    &_4 {
+      @media (max-width: $desk) {
+        order: 3;
+      }
+    }
+    &_5 {
+      @media (max-width: $desk) {
+        order: 4;
+      }
+    }
+    &_6 {
+      @media (max-width: $desk) {
+        order: 9;
+      }
+    }
+    &_7 {
+      @media (max-width: $desk) {
+        order: 5;
+      }
+    }
+    &_8 {
+      @media (max-width: $desk) {
+        order: 6;
+      }
+    }
+    &_9 {
+      @media (max-width: $desk) {
+        order: 8;
+      }
+    }
+  }
+
+  // .details__img-wrapper
+
+  &__img-wrapper {
+    width: rem(76);
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+    @media (max-width: $desk) {
+      width: rem(70);
+    }
+    @media (max-width: $mobile) {
+      margin: 0 auto rem(10);
+      width: rem(57);
+      // width: rem(62);
+    }
+  }
+
+  // .details__img
+
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  // .details__text
+
+  &__text {
+    text-wrap: balance;
+    @media (max-width: $mobile) {
+      text-align: center;
+      max-width: rem(230);
+      margin: 0 auto;
+      font-size: rem(14);
+    }
+    @media (max-width: $mobileSmall) {
+      font-size: rem(12);
+    }
+    @media (max-width: rem(400)) {
+      font-size: rem(10);
+    }
+    // .details__text_bold
+
+    &_bold {
+      font-weight: 700;
+    }
+  }
+}
