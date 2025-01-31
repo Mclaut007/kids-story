@@ -542,14 +542,13 @@
     padding: rem(8) rem(12);
     text-transform: none;
     background-color: var(--color2);
-  }
-
-  @media (max-width: $mobileMiddle) {
-    width: 100%;
-    background: var(--color3);
-    @media (hover: hover) and (pointer: fine) {
-      &:hover {
-        background: var(--color2);
+    @media (max-width: $mobileMiddle) {
+      width: 100%;
+      background: var(--color3);
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background: var(--color2);
+        }
       }
     }
   }

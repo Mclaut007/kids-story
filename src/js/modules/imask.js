@@ -4,40 +4,43 @@ import IMask from "imask";
 
 function inputPhoneIMask() {
   // input с телефоном
-  const phoneInput = document.querySelector("#phone-input");
-
-  // Кнопка отправки формы
-  const phoneSubmit = document.querySelector(".sign-up-tour__submit-button ");
+  const phoneInputAll = document.querySelectorAll("[id$=phone-input]");
 
   // Создаем маску в инпуте
-  const mask = new IMask(phoneInput, {
-    mask: "+{7}000-000-00-00",
-    lazy: false, // Чтобы "placeholder" не исчезал при введении номера
-  });
+  phoneInputAll.forEach((item) => {
+    const mask = new IMask(item, {
+      mask: "+{7}000-000-00-00",
+      lazy: false, // Чтобы "placeholder" не исчезал при введении номера
+    });
 
-  // Если номер телефона введен не полностью, кнопка отправки формы не сработает. Она по умолчанию имеет pointer-events: none. Класс _active делает pointer-event: auto; Добавляем класс _active, когда номер введен полностью.
+    // Кнопка отправки формы
 
-  phoneInput.addEventListener("input", phoneInputHandler);
+    const form = item.closest("form");
+    const phoneSubmit = form.querySelector("[class*=submit-button]");
 
-  function phoneInputHandler() {
-    if (mask.masked.isComplete) {
-      phoneSubmit.classList.add("_active");
-    } else {
-      phoneSubmit.classList.remove("_active");
+    // const phoneSubmit = document.querySelector(".sign-up-tour__submit-button");
+
+    // Если номер телефона введен не полностью, кнопка отправки формы не сработает. Она по умолчанию имеет pointer-events: none. Класс _active делает pointer-event: auto; Добавляем класс _active, когда номер введен полностью.
+
+    item.addEventListener("input", phoneInputHandler);
+
+    function phoneInputHandler() {
+      if (mask.masked.isComplete) {
+        phoneSubmit.classList.add("_active");
+      } else {
+        phoneSubmit.classList.remove("_active");
+      }
     }
-  }
 
-  // При отправке формы записываем в value номер без скобок и дефисов
+    // При отправке формы записываем в value номер без скобок и дефисов
 
-  const form = document.querySelector(".sign-up-tour__form");
-
-  form.addEventListener("submit", () => {
-    input.value = mask.unmaskedValue;
+    form.addEventListener("submit", () => {
+      item.value = mask.unmaskedValue;
+    });
   });
 
   // ========== Вариант без перезагрузки страницы ========= //
   // Тогда строчки кода с прослушкой выше удаляем.
-
   // При клике по кнопке отправляем введенный номер куда-нибудь (на почту, например)
 
   // phoneSubmit.addEventListener("click", btnHandler);
