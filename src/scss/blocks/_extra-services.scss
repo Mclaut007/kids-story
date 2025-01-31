@@ -1,0 +1,174 @@
+.extra-services {
+  // .extra-services__container
+
+  &__container {
+    padding-top: rem(104);
+    @media (max-width: $mobileMiddle) {
+      padding-top: rem(80);
+    }
+    @media (max-width: $mobileSmall) {
+      padding-top: rem(58);
+    }
+  }
+
+  // .extra-services__heading
+
+  &__heading {
+    margin-bottom: rem(41);
+    color: var(--color2);
+    @media (max-width: $desk) {
+      font-size: rem(36);
+      margin-bottom: rem(36);
+    }
+    @media (max-width: $tablet) {
+      font-size: rem(32);
+      margin-bottom: rem(30);
+    }
+    @media (max-width: $mobileMiddle) {
+      font-size: rem(30);
+      text-align: center;
+      margin-bottom: rem(24);
+    }
+    @media (max-width: $mobileSmall) {
+      font-size: rem(28);
+      text-align: left;
+    }
+    @media (max-width: rem(400)) {
+      font-size: rem(24);
+      margin-bottom: rem(17);
+    }
+  }
+
+  // .extra-services__items
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    // grid-template-rows: repeat(3, 1fr);
+    column-gap: rem(19);
+    row-gap: rem(29);
+    grid-template-areas:
+      "item1 item1 item1 item2 item2 item2 item2 item2 item2 item3 item3 item3 item4 item4 item4"
+      "item5 item5 item5 item5 item6 item6 item6 item7 item7 item7 item7 item8 item8 item8 item8"
+      "item9 item9 item9 item9 item9 item10 item10 item10 item10 item10 item11 item11 item11 item11 item11";
+    @media (max-width: $deskMiddle) {
+      grid-template-areas:
+        "item1 item1 item1 item2 item2 item2 item2 item2 item2 item2 item2 item3 item3 item3 item3"
+        "item4 item4 item4 item4 item5 item5 item5 item5 item5 item5 item6 item6 item6 item6 item6"
+        "item7 item7 item7 item7 item7 item8 item8 item8 item8 item9 item9 item9 item9 item9 item9"
+        "item10 item10 item10 item10 item10 item10 item10 item11 item11 item11 item11 item11 item11 item11 item11";
+    }
+    @media (max-width: $tablet) {
+      grid-template-areas:
+        "item1 item1 item1 item1 item1 item2 item2 item2 item2 item2 item2 item2 item2 item2 item2"
+        "item3 item3 item3 item3 item3 item3 item3 item3 item4 item4 item4 item4 item4 item4 item4"
+        "item5 item5 item5 item5 item5 item5 item5 item6 item6 item6 item6 item6 item6 item6 item6"
+        "item7 item7 item7 item7 item7 item7 item7 item7 item7 item8 item8 item8 item8 item8 item8"
+        "item9 item9 item9 item9 item9 item9 item9 item10 item10 item10 item10 item10 item10 item10 item10"
+        ". item11 item11 item11 item11 item11 item11 item11 item11 item11 item11 item11 . . .";
+    }
+    @media (max-width: $mobileMiddle) {
+      max-width: rem(460);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: rem(20);
+    }
+    @media (max-width: rem(400)) {
+      gap: rem(9);
+    }
+  }
+
+  // .extra-services__item
+
+  &__item {
+    padding: rem(12);
+    background: #fff6d1;
+    border-radius: rem(10);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    @media (min-width: $mobileMiddleMin) {
+      &:nth-child(1) {
+        grid-area: item1;
+      }
+      &:nth-child(2) {
+        grid-area: item2;
+      }
+      &:nth-child(3) {
+        grid-area: item3;
+      }
+      &:nth-child(4) {
+        grid-area: item4;
+      }
+      &:nth-child(5) {
+        grid-area: item5;
+      }
+      &:nth-child(6) {
+        grid-area: item6;
+      }
+      &:nth-child(7) {
+        grid-area: item7;
+      }
+      &:nth-child(8) {
+        grid-area: item8;
+      }
+      &:nth-child(9) {
+        grid-area: item9;
+      }
+      &:nth-child(10) {
+        grid-area: item10;
+      }
+      &:nth-child(11) {
+        grid-area: item11;
+      }
+    }
+    @media (max-width: $mobileMiddle) {
+      gap: rem(12);
+      // &:not(:last-child) {
+      //   margin-bottom: rem(10);
+      // }
+    }
+    @media (max-width: rem(400)) {
+      gap: rem(10);
+      padding: rem(9);
+    }
+  }
+
+  // .extra-services__item-img
+
+  &__item-img {
+    width: rem(76);
+    // height: rem(76);
+    aspect-ratio: 1 / 1;
+    @media (max-width: $deskMiddle) {
+      width: rem(70);
+    }
+    @media (max-width: $tablet) {
+      width: rem(64);
+    }
+    @media (max-width: rem(400)) {
+      width: rem(56);
+    }
+  }
+
+  // .extra-services__item-text
+
+  &__item-text {
+    text-align: center;
+    max-width: rem(320);
+    margin: 0 auto;
+    font-weight: 700;
+    @media (max-width: $desk) {
+      font-size: rem(14);
+    }
+    @media (max-width: $mobileMiddle) {
+      // font-size: rem(12);
+      margin: 0;
+      text-align: left;
+    }
+    @media (max-width: rem(400)) {
+      font-size: rem(10);
+    }
+  }
+}
