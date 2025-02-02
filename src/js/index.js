@@ -120,6 +120,12 @@ import introSwiper from "./modules/intro-swiper";
 
 introSwiper();
 
+// ================= Video-gallery-swiper =============== //
+
+import videoGallerySwiper from "./modules/video-gallery-swiper";
+
+videoGallerySwiper();
+
 // ========== Плагин Imaskjs (маска для телефона) ========== //
 
 import inputPhoneIMask from "./modules/imask";
@@ -128,9 +134,9 @@ inputPhoneIMask();
 
 // ==================== Popup-окно ===================== //
 
-// import showHidePopup from "./modules/popup";
+import findAndActivatePopups from "./modules/popups";
 
-// showHidePopup();
+findAndActivatePopups();
 
 // ========= Показываем/скрываем хедер при скролле ========= //
 
