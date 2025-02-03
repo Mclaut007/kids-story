@@ -1,0 +1,123 @@
+.advantages {
+  position: relative;
+  // .advantages__container
+
+  &__container {
+    padding: rem(39) rem(20) rem(56);
+    position: relative;
+    @media (max-width: $tablet) {
+      padding: rem(44) rem(20) rem(42);
+    }
+    &::before {
+      content: "";
+      width: rem(216);
+      height: rem(421);
+      background: url("../../img/advantages/bg-decor.png") no-repeat right top / contain;
+      position: absolute;
+      top: 0;
+      left: rem(-300);
+    }
+  }
+
+  // .advantages__heading
+
+  &__heading {
+    color: var(--color2);
+    margin-bottom: rem(24);
+    @media (max-width: $deskMiddle) {
+      margin-bottom: rem(20);
+    }
+    @media (max-width: $desk) {
+      margin-bottom: rem(18);
+    }
+    @media (max-width: $tablet) {
+      margin-bottom: rem(16);
+    }
+    @media (max-width: $mobileMiddle) {
+      margin-bottom: rem(14);
+    }
+    @media (max-width: $mobileSmall) {
+      margin-bottom: rem(12);
+    }
+    @media (max-width: rem(400)) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  // .advantages__text
+
+  &__text {
+    max-width: rem(1001);
+    margin-bottom: rem(58);
+    @media (max-width: $desk) {
+      margin-bottom: rem(54);
+    }
+    @media (max-width: $tablet) {
+      margin-bottom: rem(50);
+    }
+    @media (max-width: $mobileMiddle) {
+      margin-bottom: rem(39);
+    }
+    // @media (max-width: $mobileSmall) {
+    //   margin-bottom: rem(39);
+    // }
+  }
+
+  // .advantages__items
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(25) rem(20);
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: rem(21);
+    }
+  }
+
+  // .advantages__item
+
+  &__item {
+    display: flex;
+    gap: rem(20);
+    align-items: center;
+    @media (max-width: $mobileMiddle) {
+      flex-direction: column;
+      align-items: center;
+      row-gap: rem(15);
+      text-align: center;
+    }
+  }
+
+  // .advantages__item-img
+
+  &__item-img {
+    width: rem(76);
+    aspect-ratio: 1 / 1;
+    @media (max-width: $desk) {
+      width: rem(70);
+    }
+    @media (max-width: $mobile) {
+      width: rem(60);
+    }
+  }
+
+  // .advantages__item-text
+
+  &__item-text {
+    font-weight: 700;
+    font-size: rem(20);
+    @media (max-width: $deskMiddle) {
+      font-size: rem(18);
+    }
+    @media (max-width: $tablet) {
+      font-size: rem(16);
+    }
+    @media (max-width: $mobileSmall) {
+      font-size: rem(14);
+    }
+    @media (max-width: rem(400)) {
+      font-size: rem(12);
+    }
+  }
+}

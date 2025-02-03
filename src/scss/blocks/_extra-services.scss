@@ -17,24 +17,19 @@
     margin-bottom: rem(41);
     color: var(--color2);
     @media (max-width: $desk) {
-      font-size: rem(36);
       margin-bottom: rem(36);
     }
     @media (max-width: $tablet) {
-      font-size: rem(32);
       margin-bottom: rem(30);
     }
     @media (max-width: $mobileMiddle) {
-      font-size: rem(30);
       text-align: center;
       margin-bottom: rem(24);
     }
     @media (max-width: $mobileSmall) {
-      font-size: rem(28);
       text-align: left;
     }
     @media (max-width: rem(400)) {
-      font-size: rem(24);
       margin-bottom: rem(17);
     }
   }

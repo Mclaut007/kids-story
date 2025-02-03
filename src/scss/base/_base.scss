@@ -155,8 +155,35 @@ body._lock {
 .heading2 {
   font-weight: 700;
   font-size: rem(40);
+  @media (max-width: $desk) {
+    font-size: rem(36);
+  }
+  @media (max-width: $tablet) {
+    font-size: rem(32);
+  }
+  @media (max-width: $mobileMiddle) {
+    font-size: rem(30);
+  }
+  @media (max-width: $mobileSmall) {
+    font-size: rem(28);
+  }
+  @media (max-width: rem(400)) {
+    font-size: rem(24);
+  }
 }
 
 .paragraph {
   font-size: rem(20);
+  @media (max-width: $tablet) {
+    font-size: rem(18);
+  }
+  @media (max-width: $mobileMiddle) {
+    font-size: rem(16);
+  }
+  @media (max-width: $mobileSmall) {
+    font-size: rem(14);
+  }
+  @media (max-width: rem(400)) {
+    font-size: rem(12);
+  }
 }
