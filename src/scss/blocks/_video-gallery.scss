@@ -7,6 +7,7 @@
     aspect-ratio: 3.7 / 1;
     background: url("../../img/video-gallery/wave-bg.svg") no-repeat center / contain;
     position: absolute;
+    z-index: -1;
     top: rem(398);
     left: 50%;
     transform: translateX(-50%);
@@ -247,6 +248,10 @@
         width: rem(12);
         height: rem(12);
       }
+      @media (max-width: $mobileSmall) {
+        width: rem(10);
+        height: rem(10);
+      }
     }
     .swiper-pagination-bullet-active {
       background: var(--color3);
@@ -308,18 +313,21 @@
   // .video-gallery__popup-close-btn
 
   &__popup-close-btn {
-    width: rem(40);
+    width: rem(36);
     // height: rem(40);
     aspect-ratio: 1 / 1;
     background: url("../../img/common/cross-close.svg") no-repeat center/contain;
     position: absolute;
     right: 0;
-    top: calc(rem(-71));
+    top: rem(-67);
     cursor: pointer;
     @media (max-width: $mobile) {
       right: 1rem;
       width: rem(32);
       top: calc(rem(-48));
+    }
+    @media (max-width: $mobileSmall) {
+      width: rem(22);
     }
   }
 
@@ -336,7 +344,7 @@
   }
 }
 
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.video-gallery__swiper-pagination.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 rem(11);
   @media (max-width: $mobileSmall) {
     margin: 0 rem(8);

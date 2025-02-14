@@ -3,7 +3,8 @@
   // .advantages__container
 
   &__container {
-    padding: rem(39) rem(20) rem(56);
+    padding: rem(39) rem(20) rem(95);
+    // padding: rem(39) rem(20) rem(56);
     position: relative;
     @media (max-width: $tablet) {
       padding: rem(44) rem(20) rem(42);

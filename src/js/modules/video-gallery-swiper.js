@@ -7,7 +7,6 @@ export default function introSwiper() {
       el: ".video-gallery__swiper-pagination",
       clickable: true,
     },
-    // slidesPerView: 3,
     slidesPerView: 1,
     centeredSlides: true,
     spaceBetween: 20,

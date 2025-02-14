@@ -26,8 +26,8 @@ body {
 
 [class$="__container"],
 [class$="-container"],
-[class$="__container_wide"],
-[class$="-container_wide"] {
+[class*="__container_wide"],
+[class*="-container_wide"] {
   min-width: $minWidth;
   padding: 0 rem(20);
   margin: 0 auto;
@@ -38,8 +38,8 @@ body {
   max-width: $maxWidth;
 }
 
-[class$="__container_wide"],
-[class$="-container_wide"] {
+[class*="__container_wide"],
+[class*="-container_wide"] {
   max-width: rem(1834);
 }
 

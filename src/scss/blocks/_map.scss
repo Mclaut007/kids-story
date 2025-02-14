@@ -1,0 +1,21 @@
+.map {
+  padding: 0 rem(20);
+  // .map__container
+
+  &__container {
+    // .map__container_wide
+
+    &_wide {
+      min-width: auto;
+      padding: 0;
+      height: rem(501);
+      border-radius: rem(20);
+      overflow: hidden;
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: 100%;
+  }
+}

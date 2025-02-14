@@ -74,12 +74,6 @@ gulp.task("sass:dev", function () {
           "$1$2$3$4$6$1"
         )
       )
-      // .pipe(
-      //   replace(
-      //     /(['"]?)(\.\.\/)+(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/g,
-      //     "$1$2$3$4$6$1"
-      //   )
-      // )
       .pipe(sourceMaps.write())
       .pipe(gulp.dest("./build/css/"))
       .pipe(browserSync.stream())

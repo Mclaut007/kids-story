@@ -1,0 +1,295 @@
+.testimonials {
+  padding: 0 rem(20) rem(60);
+  @media (max-width: $tablet) {
+    padding-bottom: rem(40);
+  }
+  @media (max-width: $mobileSmall) {
+    padding-bottom: rem(30);
+  }
+  // .testimonials__container_wide
+
+  &__container_wide {
+    background: #f2f2ff;
+    border-radius: rem(20);
+    padding: 0;
+    min-width: auto;
+  }
+
+  // .testimonials__container
+
+  &__container {
+    padding: rem(68) rem(20) rem(79);
+    min-width: auto;
+    @media (max-width: $tablet) {
+      padding: rem(60) rem(20) rem(46);
+    }
+    @media (max-width: $mobileSmall) {
+      padding: rem(28) rem(17) rem(32);
+    }
+    position: relative;
+    &::after {
+      content: "";
+      width: rem(241);
+      height: rem(180);
+      background: url("../../img/testimonials/decor-triangle.svg") no-repeat top right / contain;
+      position: absolute;
+      top: rem(-43);
+      right: rem(-90);
+      @media (max-width: $desk) {
+        width: rem(200);
+        top: rem(64);
+        right: 1rem;
+      }
+      @media (max-width: $tablet) {
+        right: -2rem;
+      }
+      @media (max-width: $mobileMiddle) {
+        width: rem(163);
+      }
+      @media (max-width: $mobileSmall) {
+        top: rem(62);
+        right: rem(-6);
+        transform: rotate(-15deg);
+      }
+    }
+  }
+  // .testimonials__heading2
+
+  &__heading2 {
+    margin-bottom: rem(40);
+    @media (max-width: $desk) {
+      margin-bottom: rem(33);
+    }
+    @media (max-width: $mobileSmall) {
+      margin-bottom: rem(28);
+    }
+  }
+
+  // .testimonials__outer-swiper-wrapper
+
+  &__outer-swiper-wrapper {
+    padding: 0 rem(95);
+    position: relative;
+    @media (max-width: $deskMiddle) {
+      padding: 0 rem(85);
+    }
+    // @media (max-width: $tablet) {
+    //   padding: 0 rem(85);
+    // }
+    @media (max-width: $mobile) {
+      padding: 0;
+    }
+  }
+
+  // .testimonials__swiper
+
+  &__swiper {
+    user-select: none;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  // .testimonials__swiper-wrapper
+
+  &__swiper-wrapper {
+  }
+
+  // .testimonials__swiper-`
+
+  &__swiper-slide {
+    height: unset;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .testimonials__more
+
+  &__more {
+    margin-top: rem(21);
+    display: block;
+    width: fit-content;
+    color: var(--main-color);
+    transition: color 0.3s ease;
+    @media (max-width: $mobileSmall) {
+      font-size: rem(14);
+    }
+    @media (max-width: rem(400)) {
+      font-weight: 600;
+      margin: rem(17) auto 0;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--color2);
+      }
+    }
+  }
+
+  // .testimonials__swiper-button-prev, .testimonials__swiper-button-next
+
+  &__swiper-button-prev,
+  &__swiper-button-next {
+    position: absolute;
+    // top: rem(109);
+    top: rem(70);
+    width: rem(60);
+    height: rem(60);
+    z-index: 1;
+    transition: fill 0.3s ease;
+    @media (max-width: $mobile) {
+      display: none;
+    }
+    // @media (max-width: $mobileSmall) {
+    //   display: none;
+    // }
+    path {
+      transition: fill 0.3s ease;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        cursor: pointer;
+        fill: var(--color2);
+        path {
+          fill: var(--white-color);
+        }
+      }
+    }
+  }
+
+  // .testimonials__swiper-button-prev
+
+  &__swiper-button-prev {
+    transform: rotate(180deg);
+    left: 0;
+  }
+
+  // .testimonials__swiper-button-next
+
+  &__swiper-button-next {
+    right: 0;
+  }
+
+  // .testimonials__swiper-pagination
+
+  &__swiper-pagination {
+  }
+}
+
+.testimonial-card {
+  border-radius: rem(20);
+  background: var(--white-color);
+  padding: rem(35) rem(36);
+  flex-grow: 1;
+  @media (max-width: $mobileSmall) {
+    padding: rem(24) rem(20) rem(32);
+  }
+
+  // .testimonial-card__top
+
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: rem(21);
+    margin-bottom: rem(21);
+    @media (max-width: $mobileSmall) {
+      gap: rem(17);
+      margin-bottom: rem(14);
+    }
+  }
+
+  // .testimonial-card__img
+
+  &__img {
+    width: rem(60);
+    height: rem(60);
+    @media (max-width: $tablet) {
+      width: rem(48);
+      height: rem(48);
+    }
+    @media (max-width: $mobileSmall) {
+      width: rem(37);
+      height: rem(37);
+    }
+  }
+
+  // .testimonial-card__person
+
+  &__person {
+  }
+
+  // .testimonial-card__name
+
+  &__name {
+    font-weight: 600;
+    font-size: rem(20);
+    margin-bottom: rem(4);
+    @media (max-width: $mobileSmall) {
+      font-size: rem(16);
+      margin-bottom: rem(7);
+    }
+  }
+
+  // .testimonial-card__city
+
+  &__city {
+    font-size: rem(14);
+    @media (max-width: $mobileSmall) {
+      font-size: rem(12);
+    }
+  }
+
+  // .testimonial-card__bottom
+
+  &__bottom {
+    font-size: rem(20);
+    display: -webkit-box;
+    line-clamp: 4;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    @media (max-width: $desk) {
+      font-size: rem(18);
+    }
+    @media (max-width: $mobileMiddle) {
+      line-clamp: 7;
+      -webkit-line-clamp: 7;
+    }
+    @media (max-width: $mobileSmall) {
+      font-size: rem(16);
+    }
+    @media (max-width: rem(400)) {
+      font-size: rem(12);
+    }
+  }
+}
+
+.testimonials__swiper-pagination {
+  text-align: center;
+  margin-top: rem(31);
+  // @media (min-width: $mobile) {
+  //   display: none;
+  // }
+}
+
+.testimonials__swiper-pagination.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 rem(11);
+  background: #fddc4e;
+  opacity: 1;
+  width: rem(14);
+  height: rem(14);
+  @media (max-width: $mobileMiddle) {
+    width: rem(12);
+    height: rem(12);
+  }
+  @media (max-width: $mobileSmall) {
+    width: rem(10);
+    height: rem(10);
+    margin: 0 rem(8);
+  }
+}
+
+.testimonials__swiper-pagination.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet-active {
+  background: var(--color3);
+}

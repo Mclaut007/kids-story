@@ -94,7 +94,7 @@ gulp.task("sass:docs", function () {
           /(['"]?)(\.\.\/)+(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
           "$1$2$3$4$6$1"
         )
-      )``
+      )
       .pipe(autoprefixer())
       // Группировка медиазапросов. Лучше не использовать во время разработки. Потому что, в частности, появляются баги в работе sourceMaps. Плюс, имеет смысл использовать при mobile first (на мой взгляд).
       .pipe(groupMedia())

@@ -1,7 +1,9 @@
 .get-consultation {
   padding: 0 rem(20);
+  &_2 {
+    padding-bottom: rem(48);
+  }
   // .get-consultation__container
-
   &__container {
     position: relative;
     padding: rem(48) rem(20) rem(49);
@@ -25,7 +27,9 @@
       background: var(--color2);
       border-radius: rem(20);
       padding: 0;
-      margin: 0 max(auto, rem(20));
+      &_2 {
+        background: #fff6d1;
+      }
     }
   }
 
@@ -35,6 +39,9 @@
     max-width: rem(632);
     position: relative;
     z-index: 1;
+    &_2 {
+      max-width: rem(665);
+    }
     @media (max-width: $deskMiddle) {
       max-width: rem(600);
     }
@@ -58,6 +65,9 @@
     color: var(--white-color);
     margin-bottom: rem(27);
     text-wrap: balance;
+    &_2 {
+      color: var(--main-color);
+    }
     @media (max-width: $deskMiddle) {
       font-size: rem(38);
       margin-bottom: rem(24);
@@ -90,6 +100,9 @@
     max-width: rem(442);
     color: var(--white-color);
     margin-bottom: rem(31);
+    &_2 {
+      color: var(--main-color);
+    }
     // text-wrap: balance;
     @media (max-width: $deskMiddle) {
       // font-size: rem(18);
@@ -112,6 +125,10 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    &_2 {
+      width: rem(632);
+      max-width: 100%;
+    }
   }
 
   // .get-consultation__input
@@ -125,6 +142,9 @@
     color: var(--main-color);
     font-weight: 600;
     font-size: rem(10);
+    &_2 {
+      background: #fddc4e;
+    }
     &-phone {
       letter-spacing: rem(5);
       margin-right: rem(16);
@@ -145,6 +165,10 @@
   &__submit-button {
     color: var(--main-color);
     background: #f6b31f;
+    &_2 {
+      background: var(--color3);
+      color: var(--white-color);
+    }
     @media (max-width: $deskMiddle) {
       min-width: auto;
       width: 33%;
@@ -158,6 +182,10 @@
       &:hover {
         background: var(--color3);
         color: var(--white-color);
+      }
+      &_2:hover {
+        color: var(--main-color);
+        background: #f6b31f;
       }
     }
   }
@@ -203,6 +231,13 @@
       border-radius: 50%;
       flex-shrink: 0;
     }
+    &_2 {
+      color: var(--main-color);
+      &::before {
+        border: rem(4) solid var(--main-color);
+        background: var(--main-color);
+      }
+    }
   }
 
   // .get-consultation__img
@@ -214,20 +249,34 @@
     width: rem(701);
     pointer-events: none;
     user-select: none;
+    &_2 {
+      width: rem(679);
+      right: rem(14);
+      bottom: rem(-62);
+    }
     @media (max-width: $deskMiddle) {
       left: 55%;
       width: rem(650);
       bottom: rem(-53);
+      &_2 {
+        bottom: rem(-58);
+      }
     }
     @media (max-width: $desk) {
       left: 60%;
       width: rem(600);
       bottom: rem(-49);
+      &_2 {
+        bottom: rem(-55);
+      }
     }
     @media (max-width: $tablet) {
       // left: 65%;
       width: rem(550);
       bottom: rem(-44);
+      &_2 {
+        bottom: rem(-50);
+      }
     }
     @media (max-width: $mobile) {
       left: 50%;
@@ -235,15 +284,24 @@
       width: rem(500);
       bottom: rem(-40);
       // max-width: 100%;
+      &_2 {
+        bottom: rem(-45);
+      }
     }
     @media (max-width: $mobileMiddle) {
       width: rem(440);
       bottom: rem(-36);
       max-width: none;
+      &_2 {
+        bottom: rem(-40);
+      }
     }
     @media (max-width: $mobileSmall) {
       max-width: rem(350);
       bottom: rem(-28.5);
+      &_2 {
+        bottom: rem(-32);
+      }
     }
   }
 }

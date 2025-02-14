@@ -138,6 +138,30 @@ import findAndActivatePopups from "./modules/popups";
 
 findAndActivatePopups();
 
+// ================= Our-team-swiper =============== //
+
+import ourTeamSwiper from "./modules/our-team-swiper";
+
+ourTeamSwiper();
+
+// ================= Move person in our-team__popup =============== //
+
+import movePersonInOurTeamPopup from "./modules/our-team-popup-move-person";
+
+movePersonInOurTeamPopup();
+
+// ================= Testimonials-swiper =============== //
+
+import testimonialsSwiper from "./modules/testimonials-swiper";
+
+testimonialsSwiper();
+
+// ================= Yandex-map =============== //
+
+import createYandexMap from "./modules/yandex-map";
+
+createYandexMap();
+
 // ========= Показываем/скрываем хедер при скролле ========= //
 
 // Показываем/скрываем фиксированный хедер при скролле. При скролле вниз хедер исчезает, при скролле вверх - появляется.

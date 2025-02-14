@@ -4,7 +4,7 @@ import IMask from "imask";
 
 function inputPhoneIMask() {
   // input с телефоном
-  const phoneInputAll = document.querySelectorAll("[id$=phone-input]");
+  const phoneInputAll = document.querySelectorAll("[id*=phone-input]");
 
   // Создаем маску в инпуте
   phoneInputAll.forEach((item) => {

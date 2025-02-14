@@ -23,6 +23,9 @@ function findAndActivatePopups() {
   function showHidePopup() {
     const popupId = this.dataset.popupBtnOpen;
     const popup = document.querySelector(`#${popupId}`);
+
+    if (!popup) return;
+
     popup.classList.add("_open");
     addScrollbarGutter();
     body.classList.add("_lock");
@@ -35,7 +38,7 @@ function findAndActivatePopups() {
       );
     }
 
-    // === Закрываем popup-окно трем способами === //
+    // === Закрываем popup-окно тремя способами === //
 
     // Закрываем popup-окно кликом по пустой области (и по крестику)
     popup.addEventListener("click", closePopup);
