@@ -2,7 +2,7 @@
   // .extra-services__container
 
   &__container {
-    padding-top: rem(104);
+    padding-top: rem(101);
     @media (max-width: $mobileMiddle) {
       padding-top: rem(80);
     }
@@ -70,7 +70,7 @@
       gap: rem(20);
     }
     @media (max-width: rem(400)) {
-      gap: rem(9);
+      gap: rem(8);
     }
   }
 

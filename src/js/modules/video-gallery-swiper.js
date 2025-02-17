@@ -13,6 +13,7 @@ export default function introSwiper() {
     keyboard: true,
     breakpoints: {
       992: {
+        spaceBetween: 0,
         slidesPerView: 3,
       },
     },

@@ -14,7 +14,7 @@
 
   &__container {
     min-height: rem(100);
-    padding-top: rem(17);
+    padding-top: rem(16);
     display: flex;
     align-items: end;
     column-gap: rem(76);
@@ -34,6 +34,7 @@
     }
     @media (max-width: $mobileMiddle) {
       align-items: flex-end;
+      padding-top: rem(18);
     }
   }
 
@@ -130,7 +131,7 @@
   &__menu-link {
     display: block;
     color: var(--main-color);
-    padding: rem(8) rem(8) rem(49);
+    padding: rem(8) rem(8) rem(46);
     font-weight: 600;
     font-size: rem(14);
     position: relative;
@@ -308,7 +309,7 @@
     align-items: flex-start;
     flex-wrap: wrap;
     @media (max-width: $deskMiddle) {
-      gap: 2rem;
+      gap: rem(25);
     }
     @media (max-width: $tablet) {
       justify-content: space-between;
@@ -364,6 +365,7 @@
   // .header__phone-numbers
 
   &__phone-numbers {
+    font-family: "gotham-pro-medium", sans-serif;
     font-size: rem(20);
     color: var(--main-color);
     line-height: 0.8;
@@ -432,13 +434,16 @@
   // .header__menu-burger
 
   &__menu-burger {
-    width: rem(28);
-    height: rem(14);
+    width: rem(30);
+    height: rem(16);
     position: relative;
     display: none;
     align-self: center;
     @media (max-width: $tablet) {
       display: block;
+    }
+    @media (max-width: $mobileSmall) {
+      margin-top: rem(-6);
     }
     &::before {
       content: "";
@@ -481,54 +486,6 @@
   // .logo__img
 
   &__img {
-  }
-}
-
-.phone-icon {
-}
-
-.phone-icon_clone circle {
-  fill: var(--white-color);
-}
-
-.phone-icon_clone path {
-  fill: var(--color3);
-}
-
-.social-medias {
-  display: flex;
-  align-items: center;
-  column-gap: rem(25);
-  @media (max-width: $tablet) {
-    column-gap: 1rem;
-  }
-
-  // .social-medias__item
-
-  &__item {
-    // .social-medias__item_1
-
-    &_1 {
-      width: rem(30);
-    }
-
-    // .social-medias__item_2
-
-    &_2 {
-      width: rem(21);
-    }
-  }
-
-  // .social-medias__icon
-
-  &__icon {
-    width: 100%;
-    transition: transform 0.3s ease;
-    @media (hover: hover) and (pointer: fine) {
-      &:hover {
-        transform: scale(1.05);
-      }
-    }
   }
 }
 

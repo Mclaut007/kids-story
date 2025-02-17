@@ -45,7 +45,7 @@
       padding-top: rem(56);
     }
     @media (max-width: rem(400)) {
-      padding-top: rem(42);
+      padding-top: rem(43);
     }
   }
 
@@ -72,14 +72,14 @@
       margin-bottom: rem(12);
     }
     @media (max-width: rem(400)) {
-      margin-bottom: rem(10);
+      margin-bottom: rem(5);
     }
   }
 
   // .video-gallery__text
 
   &__text {
-    margin-bottom: rem(8);
+    margin-bottom: rem(9);
     position: relative;
     z-index: 2;
     @media (max-width: $mobileMiddle) {
@@ -93,7 +93,7 @@
   // .video-gallery__swiper
 
   &__swiper {
-    margin-top: rem(-12);
+    margin-top: rem(-28);
     @media (max-width: $desk) {
       margin-top: 0;
     }
@@ -103,7 +103,7 @@
       margin-top: rem(-32);
     }
     @media (max-width: $mobileSmall) {
-      margin-top: rem(-48);
+      margin-top: rem(-58);
     }
     &::before {
       content: "";
@@ -112,7 +112,7 @@
       background: url(../../img/video-gallery/decor-left.svg) no-repeat center bottom / contain;
       position: absolute;
       bottom: 0;
-      left: 25%;
+      left: 23.7%;
       @media (max-width: $desk) {
         bottom: rem(10);
         width: rem(120);
@@ -123,6 +123,8 @@
       }
       @media (max-width: $mobileSmall) {
         width: rem(100);
+        left: -21%;
+        bottom: rem(11);
       }
     }
     &::after {
@@ -131,8 +133,8 @@
       height: rem(180);
       background: url(../../img/video-gallery/decor-right.svg) no-repeat center top / contain;
       position: absolute;
-      top: 0;
-      right: 19.5%;
+      top: 1px;
+      right: 19.1%;
       @media (max-width: $desk) {
         width: rem(210);
       }
@@ -142,6 +144,8 @@
       }
       @media (max-width: $mobileSmall) {
         width: rem(168);
+        right: -24%;
+        top: rem(41);
       }
     }
   }
@@ -183,7 +187,7 @@
       aspect-ratio: 1.5 / 1;
     }
     @media (max-width: $mobileSmall) {
-      aspect-ratio: 1.2 / 1;
+      aspect-ratio: 1.21 / 1;
     }
     &.swiper-slide-active {
       cursor: pointer;
@@ -234,9 +238,9 @@
 
   &__swiper-pagination {
     &.swiper-pagination-bullets {
-      bottom: rem(20);
+      bottom: rem(14);
       @media (max-width: $tablet) {
-        bottom: 0;
+        bottom: rem(10);
       }
     }
     .swiper-pagination-bullet {

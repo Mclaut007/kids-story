@@ -25,9 +25,7 @@ body {
 // [class$="-container"] ниже для случаев типа footer__top-container
 
 [class$="__container"],
-[class$="-container"],
-[class*="__container_wide"],
-[class*="-container_wide"] {
+[class$="-container"] {
   min-width: $minWidth;
   padding: 0 rem(20);
   margin: 0 auto;
@@ -40,7 +38,10 @@ body {
 
 [class*="__container_wide"],
 [class*="-container_wide"] {
-  max-width: rem(1834);
+  margin: 0 auto;
+  max-width: rem(1804);
+  // min-width: $minWidth;
+  // padding: 0 rem(20);
 }
 
 .main {
@@ -123,24 +124,48 @@ body._lock {
 .phone-icon {
 }
 
+.phone-icon_clone circle {
+  fill: var(--white-color);
+}
+
+.phone-icon_clone path {
+  fill: var(--color3);
+}
+
 .social-medias {
+  display: flex;
+  align-items: center;
+  column-gap: rem(25);
+  @media (max-width: $tablet) {
+    column-gap: 1rem;
+  }
+
   // .social-medias__item
 
   &__item {
     // .social-medias__item_1
 
     &_1 {
+      width: rem(30);
     }
 
     // .social-medias__item_2
 
     &_2 {
+      width: rem(21);
     }
   }
 
   // .social-medias__icon
 
   &__icon {
+    width: 100%;
+    transition: transform 0.3s ease;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
   }
 
   // .social-medias__icon_clone
@@ -155,6 +180,7 @@ body._lock {
 .heading2 {
   font-weight: 700;
   font-size: rem(40);
+  line-height: 1.2;
   @media (max-width: $desk) {
     font-size: rem(36);
   }

@@ -7,6 +7,16 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: rem(20);
     row-gap: rem(25);
+    position: relative;
+    &::before {
+      content: "";
+      width: rem(160);
+      height: rem(167);
+      background: url("../../img/details/crown-decor.svg") no-repeat top right / contain;
+      position: absolute;
+      top: rem(97);
+      left: rem(-295);
+    }
     @media (max-width: $desk) {
       grid-template-columns: repeat(2, minmax(0, rem(450)));
       justify-content: space-around;
@@ -20,8 +30,8 @@
       padding-top: rem(60);
     }
     @media (max-width: rem(400)) {
-      row-gap: rem(13);
-      padding: rem(37) rem(20) rem(37);
+      row-gap: rem(11);
+      padding: rem(37) rem(20) rem(34);
     }
   }
 
@@ -107,8 +117,8 @@
   // .details__text
 
   &__text {
-    text-wrap: balance;
     @media (max-width: $mobile) {
+      text-wrap: balance;
       text-align: center;
       max-width: rem(230);
       margin: 0 auto;
@@ -119,6 +129,7 @@
     }
     @media (max-width: rem(400)) {
       font-size: rem(10);
+      line-height: 1.2;
     }
     // .details__text_bold
 

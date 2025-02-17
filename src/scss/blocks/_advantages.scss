@@ -3,11 +3,14 @@
   // .advantages__container
 
   &__container {
-    padding: rem(39) rem(20) rem(95);
+    padding: rem(40) rem(20) rem(95);
     // padding: rem(39) rem(20) rem(56);
     position: relative;
     @media (max-width: $tablet) {
-      padding: rem(44) rem(20) rem(42);
+      padding: rem(44) rem(20) rem(80);
+    }
+    @media (max-width: $mobileSmall) {
+      padding: rem(42) rem(20) rem(42);
     }
     &::before {
       content: "";
@@ -15,8 +18,8 @@
       height: rem(421);
       background: url("../../img/advantages/bg-decor.png") no-repeat right top / contain;
       position: absolute;
-      top: 0;
-      left: rem(-300);
+      top: rem(-16);
+      left: rem(-278);
     }
   }
 
@@ -50,6 +53,7 @@
   &__text {
     max-width: rem(1001);
     margin-bottom: rem(58);
+    line-height: 1.2;
     @media (max-width: $desk) {
       margin-bottom: rem(54);
     }
@@ -57,7 +61,7 @@
       margin-bottom: rem(50);
     }
     @media (max-width: $mobileMiddle) {
-      margin-bottom: rem(39);
+      margin-bottom: rem(41);
     }
     // @media (max-width: $mobileSmall) {
     //   margin-bottom: rem(39);
@@ -73,6 +77,9 @@
     @media (max-width: $mobile) {
       grid-template-columns: repeat(2, 1fr);
       row-gap: rem(21);
+    }
+    @media (max-width: $mobileSmall) {
+      row-gap: rem(18);
     }
   }
 

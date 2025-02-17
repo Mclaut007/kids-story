@@ -2,11 +2,11 @@
   // .our-team__container
 
   &__container {
-    padding-bottom: rem(103);
+    padding-bottom: rem(100);
     @media (max-width: $deskMiddle) {
     }
     @media (max-width: $mobileSmall) {
-      padding-bottom: rem(42);
+      padding-bottom: rem(38);
     }
   }
 
@@ -16,7 +16,7 @@
     color: var(--color2);
     margin-bottom: rem(53);
     @media (max-width: $mobileSmall) {
-      margin-bottom: rem(23);
+      margin-bottom: rem(24);
     }
   }
 
@@ -38,8 +38,8 @@
       background: url("../../img/our-team/decor1.svg") no-repeat top left / contain;
       position: absolute;
       z-index: 2;
-      top: rem(-74);
-      left: 23%;
+      top: rem(-73);
+      left: 24.7%;
       pointer-events: none;
       @media (max-width: $deskMiddle) {
         width: rem(120);
@@ -55,7 +55,9 @@
         top: rem(-18);
       }
       @media (max-width: rem(400)) {
-        width: rem(90);
+        width: rem(87);
+        top: rem(-12);
+        left: -16.5%;
       }
     }
     &::after {
@@ -66,7 +68,7 @@
       position: absolute;
       z-index: 1;
       top: rem(215);
-      right: 24.8%;
+      right: 24.59%;
       pointer-events: none;
       @media (max-width: $deskMiddle) {
         width: rem(80);
@@ -82,9 +84,9 @@
         top: rem(290);
       }
       @media (max-width: rem(400)) {
-        width: rem(45);
-        right: rem(2);
-        top: rem(250);
+        width: rem(42);
+        right: rem(-3);
+        top: rem(253);
       }
     }
   }
@@ -115,16 +117,14 @@
   &__img-wrapper {
     border-radius: rem(20);
     overflow: hidden;
-    margin-bottom: rem(28);
+    margin-bottom: rem(29);
     height: rem(278);
     @media (max-width: $tablet) {
-      // height: auto;
-      // aspect-ratio: 1.02 / 1;
       height: rem(350);
     }
     @media (max-width: rem(400)) {
       height: rem(278);
-      margin-bottom: rem(23);
+      margin-bottom: rem(22);
     }
   }
 
@@ -148,7 +148,10 @@
     font-size: rem(20);
     text-transform: uppercase;
     color: var(--color2);
-    margin-bottom: rem(3);
+    margin-bottom: rem(0);
+    @media (max-width: $mobileSmall) {
+      margin-bottom: rem(2);
+    }
   }
 
   // .our-team__name-middle-name
@@ -167,6 +170,9 @@
   &__profession {
     margin-bottom: rem(3);
     font-size: rem(14);
+    @media (max-width: $mobileSmall) {
+      margin-bottom: rem(1);
+    }
   }
 
   // .our-team__experience
@@ -539,6 +545,9 @@
   margin-top: rem(29);
   @media (min-width: $mobile) {
     display: none;
+  }
+  @media (max-width: $mobileSmall) {
+    margin-top: rem(21);
   }
 }
 

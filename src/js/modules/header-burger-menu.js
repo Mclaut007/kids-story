@@ -5,9 +5,11 @@ function headerBurgerMenu() {
   const header = document.querySelector(".header");
   const headerMenu = document.querySelector(".header__menu");
   const headerMenuIcon = document.querySelector(".header__menu-burger");
+  const footerBtnMenuOpen = document.querySelector(".footer__btn-menu-open");
   const body = document.body;
 
   headerMenuIcon.addEventListener("click", showHideMenu);
+  footerBtnMenuOpen.addEventListener("click", showHideMenu);
 
   function showHideMenu() {
     headerMenuIcon.classList.toggle("_menu-open");

@@ -38,7 +38,7 @@ export default function createYandexMap() {
       {
         balloonContent: `
           <div class="balloon">
-            <div class="balloon__address">г.Москва</div>
+            <div class="balloon__address">г.Cанкт-Петербург</div>
             <div class="balloon__contacts">
               <a href="tel:+79999999999">+79999999999</a>
             </div>
