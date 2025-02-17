@@ -48,7 +48,7 @@ export default function createYandexMap() {
       },
       {
         iconLayout: "default#image",
-        iconImageHref: "/img/map/mark.svg",
+        iconImageHref: "img/map/mark.svg",
         iconImageSize: [70, 93],
         iconImageOffset: [-30, -110],
       }
