@@ -349,6 +349,14 @@
     }
   }
 
+  // .header__phone-block_clone
+
+  &__phone-block_clone {
+    @media (max-width: $mobileMiddle) {
+      display: flex;
+    }
+  }
+
   // .header__phone-img
 
   &__phone-img {

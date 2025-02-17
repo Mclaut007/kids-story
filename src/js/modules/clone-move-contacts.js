@@ -9,6 +9,7 @@ export default function cloneInsertContacts() {
         ".header__contacts-bottom"
       );
       const headerContactsBottomClone = headerContactsBottom.cloneNode(true);
+
       const headerMenuList = document.querySelector(".header__menu-list");
       headerContactsBottomClone.querySelector(".header__menu-burger")?.remove();
       headerContactsBottomClone.classList.add("header__contacts-bottom_copy");
@@ -16,6 +17,11 @@ export default function cloneInsertContacts() {
 
       const button = headerContactsBottomClone.querySelector(".header__button");
       button.classList.add("button_header-clone");
+
+      const headerPhoneBlockClone = headerContactsBottomClone.querySelector(
+        ".header__phone-block"
+      );
+      headerPhoneBlockClone.classList.add("header__phone-block_clone");
 
       const headerPhoneNumbers = headerContactsBottomClone.querySelector(
         ".header__phone-numbers"
