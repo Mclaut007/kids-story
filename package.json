@@ -37,6 +37,7 @@
     "last 5 versions"
   ],
   "dependencies": {
+    "caniuse-lite": "^1.0.30001703",
     "imask": "^7.6.1",
     "swiper": "^11.2.1"
   }
